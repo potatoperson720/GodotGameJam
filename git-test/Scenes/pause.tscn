@@ -1,15 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://cil0y4djy6gey"]
 
-[ext_resource type="FontFile" uid="uid://c3h7l2seitkks" path="res://assest/UI/bitByBit_ [font].ttf" id="1_f1d2v"]
-[ext_resource type="Script" uid="uid://cb0opjsxxj4h1" path="res://scripts/pause.gd" id="1_r8yp4"]
+[ext_resource type="Script" uid="uid://cb0opjsxxj4h1" path="res://scripts/pause.gd" id="1_l2mpd"]
+[ext_resource type="FontFile" uid="uid://c3h7l2seitkks" path="res://assest/UI/bitByBit_ [font].ttf" id="2_5a6ek"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8yp4"]
-bg_color = Color(0.1254902, 0.23529412, 0.3372549, 1)
+bg_color = Color(1, 1, 1, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-border_color = Color(0.050980393, 0.16862746, 0.27058825, 1)
+border_color = Color(0.3019608, 0.60784316, 0.9019608, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -22,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_r8yp4")
+script = ExtResource("1_l2mpd")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -54,7 +54,8 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CenterContainer/Panel/VBoxContainer/MarginContainer/CenterContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_f1d2v")
+theme_override_colors/font_color = Color(0.3019608, 0.60784316, 0.9019608, 1)
+theme_override_fonts/font = ExtResource("2_5a6ek")
 text = "Pause"
 uppercase = true
 
@@ -67,7 +68,8 @@ layout_mode = 2
 
 [node name="Continue" type="Button" parent="CenterContainer/Panel/VBoxContainer/MarginContainer2/CenterContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_f1d2v")
+theme_override_colors/font_color = Color(0.3019608, 0.60784316, 0.9019608, 1)
+theme_override_fonts/font = ExtResource("2_5a6ek")
 text = "CONTINUE"
 
 [node name="MarginContainer3" type="MarginContainer" parent="CenterContainer/Panel/VBoxContainer"]
@@ -79,7 +81,8 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="CenterContainer/Panel/VBoxContainer/MarginContainer3/CenterContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_f1d2v")
+theme_override_colors/font_color = Color(0.3019608, 0.60784316, 0.9019608, 1)
+theme_override_fonts/font = ExtResource("2_5a6ek")
 text = "CLOSE
 "
 
