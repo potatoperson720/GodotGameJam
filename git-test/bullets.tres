@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://clautpn7ng55c"]
+
+[ext_resource type="Texture2D" uid="uid://bgkyp052dmi0y" path="res://Robot Warfare Asset Pack 22-11-24/Projectiles/bullets+plasma.png" id="1_4lj58"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxsqd"]
+atlas = ExtResource("1_4lj58")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7aeqa"]
+atlas = ExtResource("1_4lj58")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itedn"]
+atlas = ExtResource("1_4lj58")
+region = Rect2(16, 0, 8, 8)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxsqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7aeqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itedn")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
