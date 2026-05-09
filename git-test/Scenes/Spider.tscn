@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3aqncu36mt5u"]
+
+[ext_resource type="SpriteFrames" uid="uid://r80emnr6qb5o" path="res://Spider_Enemy.tres" id="1_7jur5"]
+[ext_resource type="Script" uid="uid://6pjp4e0a85mj" path="res://Scenes/spider.gd" id="1_cgp8y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oc654"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hrc5k"]
+radius = 62.1289
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_cgp8y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_7jur5")
+animation = &"new_animation_1"
+frame_progress = 0.98274183
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_oc654")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="PlayerCheck" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource("CircleShape2D_hrc5k")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
