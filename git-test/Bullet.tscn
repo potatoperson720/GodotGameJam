@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctfvxcoauv84q"]
+
+[ext_resource type="Script" uid="uid://c2pvmp4at77y6" path="res://bullet.gd" id="1_4s4u5"]
+[ext_resource type="SpriteFrames" uid="uid://clautpn7ng55c" path="res://bullets.tres" id="1_ayd6b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4s4u5"]
+radius = 2.0
+
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_4s4u5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("1_ayd6b")
+frame = 2
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
+shape = SubResource("CircleShape2D_4s4u5")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
