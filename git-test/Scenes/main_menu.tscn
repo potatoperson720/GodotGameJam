@@ -1,7 +1,5 @@
 [gd_scene load_steps=4 format=3 uid="uid://dt0co85ru5yg1"]
 
-[ext_resource type="Script" uid="uid://ch8g4wit23y4g" path="res://scripts/main_menu.gd" id="1_wu84c"]
-[ext_resource type="FontFile" uid="uid://c3h7l2seitkks" path="res://assest/UI/bitByBit_ [font].ttf" id="3_rtw2f"]
 [ext_resource type="Script" uid="uid://ch8g4wit23y4g" path="res://scripts/main_menu.gd" id="1_48xlc"]
 [ext_resource type="FontFile" uid="uid://c3h7l2seitkks" path="res://assest/UI/bitByBit_ [font].ttf" id="2_1ehe0"]
 
@@ -24,7 +22,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_wu84c")
 script = ExtResource("1_48xlc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -64,7 +61,6 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/CenterContainer/Panel/VBoxContainer/MarginContainer/CenterContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_rtw2f")
 theme_override_fonts/font = ExtResource("2_1ehe0")
 text = "I am kill"
 uppercase = true
@@ -79,7 +75,6 @@ layout_mode = 2
 [node name="play" type="Button" parent="MarginContainer/CenterContainer/Panel/VBoxContainer/MarginContainer2/CenterContainer"]
 custom_minimum_size = Vector2(100, 20)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_rtw2f")
 theme_override_fonts/font = ExtResource("2_1ehe0")
 text = "CONTINUE"
 
@@ -93,7 +88,6 @@ layout_mode = 2
 [node name="Button" type="Button" parent="MarginContainer/CenterContainer/Panel/VBoxContainer/MarginContainer3/CenterContainer"]
 custom_minimum_size = Vector2(100, 20)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_rtw2f")
 theme_override_fonts/font = ExtResource("2_1ehe0")
 text = "SETTINGS"
 
@@ -107,7 +101,6 @@ layout_mode = 2
 [node name="quit" type="Button" parent="MarginContainer/CenterContainer/Panel/VBoxContainer/MarginContainer4/CenterContainer"]
 custom_minimum_size = Vector2(100, 20)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_rtw2f")
 theme_override_fonts/font = ExtResource("2_1ehe0")
 text = "QUIT ;^;"
 
