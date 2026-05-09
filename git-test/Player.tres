@@ -1,0 +1,51 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://di3vk3o0ob8vr"]
+
+[ext_resource type="Texture2D" uid="uid://bheidivfio832" path="res://Robot Warfare Asset Pack 22-11-24/Soldiers/SquadLeader.png" id="1_vo43o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vo43o"]
+atlas = ExtResource("1_vo43o")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqyjc"]
+atlas = ExtResource("1_vo43o")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqata"]
+atlas = ExtResource("1_vo43o")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmdkr"]
+atlas = ExtResource("1_vo43o")
+region = Rect2(16, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d24l8"]
+atlas = ExtResource("1_vo43o")
+region = Rect2(0, 96, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vo43o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqyjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqata")
+}],
+"loop": false,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmdkr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d24l8")
+}],
+"loop": false,
+"name": &"new_animation",
+"speed": 2.0
+}]
