@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://r80emnr6qb5o"]
+
+[ext_resource type="Texture2D" uid="uid://1so42745gn2i" path="res://assest/Robots/Spider.png" id="1_rpamu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi6pu"]
+atlas = ExtResource("1_rpamu")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7jt8"]
+atlas = ExtResource("1_rpamu")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_melrh"]
+atlas = ExtResource("1_rpamu")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ww5xt"]
+atlas = ExtResource("1_rpamu")
+region = Rect2(48, 16, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi6pu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7jt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_melrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ww5xt")
+}],
+"loop": true,
+"name": &"new_animation_1",
+"speed": 5.0
+}]
