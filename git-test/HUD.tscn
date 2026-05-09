@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://ba4m0qyqqoyk8"]
+
+[ext_resource type="Script" uid="uid://cqaemibfwgwc7" path="res://Scripts/hud.gd" id="1_k5de2"]
+[ext_resource type="Texture2D" uid="uid://3b68ehel45y7" path="res://assest/UI/UI.png" id="2_efote"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efote"]
+bg_color = Color(0.7544892, 0, 0.1647844, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vow1y"]
+bg_color = Color(0.3019608, 0.60784316, 0.9019608, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k5de2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.011000001
+anchor_top = 0.017
+anchor_right = 0.15
+anchor_bottom = 0.14
+offset_left = 0.32799911
+offset_top = -0.016000748
+offset_right = 96.2
+offset_bottom = 48.28
+texture = ExtResource("2_efote")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 59.0
+offset_right = 253.0
+offset_bottom = 67.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_efote")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 75.0
+offset_right = 237.0
+offset_bottom = 83.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vow1y")

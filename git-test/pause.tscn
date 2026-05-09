@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=3 uid="uid://cil0y4djy6gey"]
+
+[ext_resource type="FontFile" uid="uid://c3h7l2seitkks" path="res://assest/UI/bitByBit_ [font].ttf" id="1_f1d2v"]
+[ext_resource type="Script" uid="uid://cb0opjsxxj4h1" path="res://scripts/pause.gd" id="1_r8yp4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8yp4"]
+bg_color = Color(0.1254902, 0.23529412, 0.3372549, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.050980393, 0.16862746, 0.27058825, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r8yp4")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r8yp4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/Panel/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBoxContainer/MarginContainer/CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_f1d2v")
+text = "Pause"
+uppercase = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="CenterContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/Panel/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Continue" type="Button" parent="CenterContainer/Panel/VBoxContainer/MarginContainer2/CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_f1d2v")
+text = "CONTINUE"
+
+[node name="MarginContainer3" type="MarginContainer" parent="CenterContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/Panel/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CenterContainer/Panel/VBoxContainer/MarginContainer3/CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_f1d2v")
+text = "CLOSE
+"
+
+[connection signal="pressed" from="CenterContainer/Panel/VBoxContainer/MarginContainer2/CenterContainer/Continue" to="." method="_on_continue_pressed"]

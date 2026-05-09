@@ -1,0 +1,108 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt0co85ru5yg1"]
+
+[ext_resource type="Script" uid="uid://ch8g4wit23y4g" path="res://scripts/main_menu.gd" id="1_wu84c"]
+[ext_resource type="FontFile" uid="uid://c3h7l2seitkks" path="res://assest/UI/bitByBit_ [font].ttf" id="3_rtw2f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brbbq"]
+bg_color = Color(0.1254902, 0.23529412, 0.3372549, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.050980393, 0.16862746, 0.27058825, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wu84c")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -78.0
+offset_right = 1218.0
+offset_bottom = 648.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/CenterContainer"]
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_brbbq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer/Panel"]
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/CenterContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/Panel/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/CenterContainer/Panel/VBoxContainer/MarginContainer/CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rtw2f")
+text = "I am kill"
+uppercase = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/CenterContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/Panel/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="play" type="Button" parent="MarginContainer/CenterContainer/Panel/VBoxContainer/MarginContainer2/CenterContainer"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rtw2f")
+text = "CONTINUE"
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/CenterContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/Panel/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/CenterContainer/Panel/VBoxContainer/MarginContainer3/CenterContainer"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rtw2f")
+text = "SETTINGS"
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/CenterContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/Panel/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+
+[node name="quit" type="Button" parent="MarginContainer/CenterContainer/Panel/VBoxContainer/MarginContainer4/CenterContainer"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rtw2f")
+text = "QUIT ;^;"
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/Panel/VBoxContainer/MarginContainer2/CenterContainer/play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/Panel/VBoxContainer/MarginContainer4/CenterContainer/quit" to="." method="_on_quit_pressed"]
