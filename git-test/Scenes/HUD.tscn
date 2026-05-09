@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ba4m0qyqqoyk8"]
 
-[ext_resource type="Script" uid="uid://cqaemibfwgwc7" path="res://Scripts/hud.gd" id="1_k5de2"]
-[ext_resource type="Texture2D" uid="uid://3b68ehel45y7" path="res://assest/UI/UI.png" id="2_efote"]
+[ext_resource type="Script" uid="uid://cqaemibfwgwc7" path="res://Scripts/hud.gd" id="1_jo1ms"]
+[ext_resource type="Texture2D" uid="uid://3b68ehel45y7" path="res://assest/UI/UI.png" id="2_psnte"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efote"]
 bg_color = Color(0.7544892, 0, 0.1647844, 1)
@@ -16,7 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_k5de2")
+script = ExtResource("1_jo1ms")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(256, 128)
@@ -30,7 +30,7 @@ offset_left = 0.32799911
 offset_top = -0.016000748
 offset_right = 96.2
 offset_bottom = 48.28
-texture = ExtResource("2_efote")
+texture = ExtResource("2_psnte")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d3aqncu36mt5u"]
 
-[ext_resource type="SpriteFrames" uid="uid://r80emnr6qb5o" path="res://Spider_Enemy.tres" id="1_7jur5"]
-[ext_resource type="Script" uid="uid://6pjp4e0a85mj" path="res://Scenes/spider.gd" id="1_cgp8y"]
+[ext_resource type="SpriteFrames" path="res://SlimeAnimatie.tres" id="1_7jur5"]
+[ext_resource type="Script" uid="uid://6pjp4e0a85mj" path="res://Scripts/spider.gd" id="1_cgp8y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oc654"]
 radius = 6.0
